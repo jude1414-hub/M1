@@ -10,9 +10,19 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
-
+~~~
+#include <stdio.h>
+int main ()
+{
+    int a;
+    scanf("%d",&a);
+    printf("Character of ASCII Value %d is %c",a,a);
+    return 0;
+}
+~~~
 ## OUTPUT:
 
+![image](https://github.com/user-attachments/assets/ac68c514-fa9d-4429-9d44-7697cf1d7882)
 
 
 
@@ -46,11 +56,31 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
-
+~~~
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if (a>=10)
+    {
+        printf("Number is positive.");
+    }
+    else if (a<0)
+    {
+        printf("Number is negative.");
+    }
+    else
+    {
+        printf("Number is positive.");
+    }
+}
+~~~
 # OUTPUT:
 
 
 
+![image](https://github.com/user-attachments/assets/08ccb9af-f8f6-4b39-8121-f722c788441d)
 
 
 
@@ -80,9 +110,22 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+~~~
+#include <stdio.h>
 
+int main() {
+    char input;
+    scanf("%c", &input);
+    ((input >= 'a' && input <= 'z') || (input >= 'A' && input <= 'Z')) 
+        ? printf("It is an ALPHABET\n") 
+        : printf("It is NOT AN ALPHABET\n");
+
+    return 0;
+}
+~~~
 ## OUTPUT:
 
+![image](https://github.com/user-attachments/assets/6a08a669-b2fb-4086-a002-e58d980e1a01)
 
 
 
@@ -111,11 +154,31 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
+~~~
+#include <stdio.h>
 
+int main() {
+    int number;
+    scanf("%d", &number);
+    if (number % 5 == 0) {
+        printf("The number is multiples of 5\n");
+        if (number % 10 == 0) {
+            printf("The number is also divisible by 10\n");
+        } else {
+            printf("The number Not divisible by 10\n");
+        }
+    } else {
+        printf("The number is NOT an multiples of 5\n");
+    }
+
+    return 0;
+}
+~~~
 ## OUTPUT:
 
 
 
+![image](https://github.com/user-attachments/assets/9b54ea7d-4e7f-490f-b5b2-f621b9e33bf8)
 
 
 
@@ -147,8 +210,39 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+~~~
+#include <stdio.h>
+#include <string.h>
 
+int main()
+{
+    int phy,che,ca,total;
+    float per;
+    char div[10];
+
+   
+    scanf("%d%d%d",&phy,&che,&ca);
+    total = phy+che+ca;
+    per = total/3.0;
+    if (per>=60)
+	 strcpy(div,"First");
+    else if (per<60 && per>=48)
+	    strcpy(div,"Second");
+	else
+	    if (per<48 && per>=36)
+		strcpy(div,"Pass");
+	    else
+		strcpy(div,"Fail");
+
+      
+       printf("Total Marks = %d\nPercentage = %5.2f\nDivision = %s\n",total,per,div);
+       return 0;
+}
+
+
+~~~
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/89646a7f-b45a-4e52-81c7-d7031a977e8e)
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
